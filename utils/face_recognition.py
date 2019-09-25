@@ -48,7 +48,7 @@ class FaceRecognition():
 		if(v1!=None):
 			v1=v1.asnumpy()[0]
 			#print('[TVM] score:{}'.format(v1))
-		'''		
+		'''
 		'''
 		rs_data = cv2.resize(target_image, (self.data_shape[2], self.data_shape[3]))
 		
@@ -63,15 +63,16 @@ class FaceRecognition():
 		#cv2.imshow('Face Detect1',data)
 		#cv2.waitKey(5)	
 		'''
-		im_data = np.transpose(np.array(im), (2,0,1))
+		im_data = np.transpose(im, (2,0,1)) #maybe don't needed
 		expand_data = np.expand_dims(im_data, axis=0)
 		data = tvm.nd.array(expand_data.astype(self.dtype))
+		
 		
 		self.module.run(data=data)
 		v1 = self.module.get_output(0)
 		if(v1!=None):
+			#print('[TVM] score:{}'.format(v1.asnumpy()[1]))
 			v1=v1.asnumpy()[0]
-			#print('[TVM] score:{}'.format(v1))
 		
 		return v1
 

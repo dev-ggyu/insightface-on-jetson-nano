@@ -18,7 +18,12 @@
     }, 
     {
       "op": "null", 
-      "name": "conv_1_conv2d_weight_sc", 
+      "name": "conv_1_conv2d_weight", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm0_gamma_mul_div_expand", 
       "inputs": []
     }, 
     {
@@ -36,15 +41,20 @@
       "name": "prelu0", 
       "attrs": {
         "flatten_data": "0", 
-        "func_name": "fuse_conv2d_broadcast_add_prelu", 
-        "num_inputs": "4", 
+        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_prelu", 
+        "num_inputs": "5", 
         "num_outputs": "1"
       }, 
-      "inputs": [[1, 0, 0], [2, 0, 0], [3, 0, 0], [4, 0, 0]]
+      "inputs": [[1, 0, 0], [2, 0, 0], [3, 0, 0], [4, 0, 0], [5, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "conv_2_dw_conv2d_weight_sc", 
+      "name": "conv_2_dw_conv2d_weight", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm1_gamma_mul_div_expand", 
       "inputs": []
     }, 
     {
@@ -62,15 +72,20 @@
       "name": "prelu1", 
       "attrs": {
         "flatten_data": "0", 
-        "func_name": "fuse_conv2d_broadcast_add_prelu_1", 
-        "num_inputs": "4", 
+        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_prelu_1", 
+        "num_inputs": "5", 
         "num_outputs": "1"
       }, 
-      "inputs": [[5, 0, 0], [6, 0, 0], [7, 0, 0], [8, 0, 0]]
+      "inputs": [[6, 0, 0], [7, 0, 0], [8, 0, 0], [9, 0, 0], [10, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "dconv_23_conv_sep_conv2d_weight_sc", 
+      "name": "dconv_23_conv_sep_conv2d_weight", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm2_gamma_mul_div_expand", 
       "inputs": []
     }, 
     {
@@ -88,15 +103,20 @@
       "name": "prelu2", 
       "attrs": {
         "flatten_data": "0", 
-        "func_name": "fuse_conv2d_broadcast_add_prelu_2", 
-        "num_inputs": "4", 
+        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_prelu_2", 
+        "num_inputs": "5", 
         "num_outputs": "1"
       }, 
-      "inputs": [[9, 0, 0], [10, 0, 0], [11, 0, 0], [12, 0, 0]]
+      "inputs": [[11, 0, 0], [12, 0, 0], [13, 0, 0], [14, 0, 0], [15, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "dconv_23_conv_dw_conv2d_weight_sc", 
+      "name": "dconv_23_conv_dw_conv2d_weight", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm3_gamma_mul_div_expand", 
       "inputs": []
     }, 
     {
@@ -114,15 +134,20 @@
       "name": "prelu3", 
       "attrs": {
         "flatten_data": "0", 
-        "func_name": "fuse_conv2d_broadcast_add_prelu_3", 
-        "num_inputs": "4", 
+        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_prelu_3", 
+        "num_inputs": "5", 
         "num_outputs": "1"
       }, 
-      "inputs": [[13, 0, 0], [14, 0, 0], [15, 0, 0], [16, 0, 0]]
+      "inputs": [[16, 0, 0], [17, 0, 0], [18, 0, 0], [19, 0, 0], [20, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "dconv_23_conv_proj_conv2d_weight_sc", 
+      "name": "dconv_23_conv_proj_conv2d_weight", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm4_gamma_mul_div_expand", 
       "inputs": []
     }, 
     {
@@ -135,11 +160,11 @@
       "name": "batch_norm4_out", 
       "attrs": {
         "flatten_data": "0", 
-        "func_name": "fuse_conv2d_broadcast_add", 
-        "num_inputs": "3", 
+        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add", 
+        "num_inputs": "4", 
         "num_outputs": "1"
       }, 
-      "inputs": [[17, 0, 0], [18, 0, 0], [19, 0, 0]]
+      "inputs": [[21, 0, 0], [22, 0, 0], [23, 0, 0], [24, 0, 0]]
     }, 
     {
       "op": "null", 
@@ -166,15 +191,20 @@
       "name": "prelu4", 
       "attrs": {
         "flatten_data": "0", 
-        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_prelu", 
+        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_prelu_4", 
         "num_inputs": "5", 
         "num_outputs": "1"
       }, 
-      "inputs": [[20, 0, 0], [21, 0, 0], [22, 0, 0], [23, 0, 0], [24, 0, 0]]
+      "inputs": [[25, 0, 0], [26, 0, 0], [27, 0, 0], [28, 0, 0], [29, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "res_3_block0_conv_dw_conv2d_weight_sc", 
+      "name": "res_3_block0_conv_dw_conv2d_weight", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm6_gamma_mul_div_expand", 
       "inputs": []
     }, 
     {
@@ -192,15 +222,20 @@
       "name": "prelu5", 
       "attrs": {
         "flatten_data": "0", 
-        "func_name": "fuse_conv2d_broadcast_add_prelu_4", 
-        "num_inputs": "4", 
+        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_prelu_5", 
+        "num_inputs": "5", 
         "num_outputs": "1"
       }, 
-      "inputs": [[25, 0, 0], [26, 0, 0], [27, 0, 0], [28, 0, 0]]
+      "inputs": [[30, 0, 0], [31, 0, 0], [32, 0, 0], [33, 0, 0], [34, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "res_3_block0_conv_proj_conv2d_weight_sc", 
+      "name": "res_3_block0_conv_proj_conv2d_weight", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm7_gamma_mul_div_expand", 
       "inputs": []
     }, 
     {
@@ -213,11 +248,11 @@
       "name": "elemwise_add0", 
       "attrs": {
         "flatten_data": "0", 
-        "func_name": "fuse_conv2d_broadcast_add_elemwise_add", 
-        "num_inputs": "4", 
+        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_elemwise_add", 
+        "num_inputs": "5", 
         "num_outputs": "1"
       }, 
-      "inputs": [[29, 0, 0], [30, 0, 0], [31, 0, 0], [20, 0, 0]]
+      "inputs": [[35, 0, 0], [36, 0, 0], [37, 0, 0], [38, 0, 0], [25, 0, 0]]
     }, 
     {
       "op": "null", 
@@ -244,15 +279,20 @@
       "name": "prelu6", 
       "attrs": {
         "flatten_data": "0", 
-        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_prelu", 
+        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_prelu_4", 
         "num_inputs": "5", 
         "num_outputs": "1"
       }, 
-      "inputs": [[32, 0, 0], [33, 0, 0], [34, 0, 0], [35, 0, 0], [36, 0, 0]]
+      "inputs": [[39, 0, 0], [40, 0, 0], [41, 0, 0], [42, 0, 0], [43, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "res_3_block1_conv_dw_conv2d_weight_sc", 
+      "name": "res_3_block1_conv_dw_conv2d_weight", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm9_gamma_mul_div_expand", 
       "inputs": []
     }, 
     {
@@ -270,15 +310,20 @@
       "name": "prelu7", 
       "attrs": {
         "flatten_data": "0", 
-        "func_name": "fuse_conv2d_broadcast_add_prelu_4", 
-        "num_inputs": "4", 
+        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_prelu_5", 
+        "num_inputs": "5", 
         "num_outputs": "1"
       }, 
-      "inputs": [[37, 0, 0], [38, 0, 0], [39, 0, 0], [40, 0, 0]]
+      "inputs": [[44, 0, 0], [45, 0, 0], [46, 0, 0], [47, 0, 0], [48, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "res_3_block1_conv_proj_conv2d_weight_sc", 
+      "name": "res_3_block1_conv_proj_conv2d_weight", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm10_gamma_mul_div_expand", 
       "inputs": []
     }, 
     {
@@ -291,11 +336,11 @@
       "name": "elemwise_add1", 
       "attrs": {
         "flatten_data": "0", 
-        "func_name": "fuse_conv2d_broadcast_add_elemwise_add", 
-        "num_inputs": "4", 
+        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_elemwise_add", 
+        "num_inputs": "5", 
         "num_outputs": "1"
       }, 
-      "inputs": [[41, 0, 0], [42, 0, 0], [43, 0, 0], [32, 0, 0]]
+      "inputs": [[49, 0, 0], [50, 0, 0], [51, 0, 0], [52, 0, 0], [39, 0, 0]]
     }, 
     {
       "op": "null", 
@@ -322,15 +367,20 @@
       "name": "prelu8", 
       "attrs": {
         "flatten_data": "0", 
-        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_prelu", 
+        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_prelu_4", 
         "num_inputs": "5", 
         "num_outputs": "1"
       }, 
-      "inputs": [[44, 0, 0], [45, 0, 0], [46, 0, 0], [47, 0, 0], [48, 0, 0]]
+      "inputs": [[53, 0, 0], [54, 0, 0], [55, 0, 0], [56, 0, 0], [57, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "res_3_block2_conv_dw_conv2d_weight_sc", 
+      "name": "res_3_block2_conv_dw_conv2d_weight", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm12_gamma_mul_div_expand", 
       "inputs": []
     }, 
     {
@@ -348,15 +398,20 @@
       "name": "prelu9", 
       "attrs": {
         "flatten_data": "0", 
-        "func_name": "fuse_conv2d_broadcast_add_prelu_4", 
-        "num_inputs": "4", 
+        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_prelu_5", 
+        "num_inputs": "5", 
         "num_outputs": "1"
       }, 
-      "inputs": [[49, 0, 0], [50, 0, 0], [51, 0, 0], [52, 0, 0]]
+      "inputs": [[58, 0, 0], [59, 0, 0], [60, 0, 0], [61, 0, 0], [62, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "res_3_block2_conv_proj_conv2d_weight_sc", 
+      "name": "res_3_block2_conv_proj_conv2d_weight", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm13_gamma_mul_div_expand", 
       "inputs": []
     }, 
     {
@@ -369,11 +424,11 @@
       "name": "elemwise_add2", 
       "attrs": {
         "flatten_data": "0", 
-        "func_name": "fuse_conv2d_broadcast_add_elemwise_add", 
-        "num_inputs": "4", 
+        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_elemwise_add", 
+        "num_inputs": "5", 
         "num_outputs": "1"
       }, 
-      "inputs": [[53, 0, 0], [54, 0, 0], [55, 0, 0], [44, 0, 0]]
+      "inputs": [[63, 0, 0], [64, 0, 0], [65, 0, 0], [66, 0, 0], [53, 0, 0]]
     }, 
     {
       "op": "null", 
@@ -400,15 +455,20 @@
       "name": "prelu10", 
       "attrs": {
         "flatten_data": "0", 
-        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_prelu", 
+        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_prelu_4", 
         "num_inputs": "5", 
         "num_outputs": "1"
       }, 
-      "inputs": [[56, 0, 0], [57, 0, 0], [58, 0, 0], [59, 0, 0], [60, 0, 0]]
+      "inputs": [[67, 0, 0], [68, 0, 0], [69, 0, 0], [70, 0, 0], [71, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "res_3_block3_conv_dw_conv2d_weight_sc", 
+      "name": "res_3_block3_conv_dw_conv2d_weight", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm15_gamma_mul_div_expand", 
       "inputs": []
     }, 
     {
@@ -426,15 +486,20 @@
       "name": "prelu11", 
       "attrs": {
         "flatten_data": "0", 
-        "func_name": "fuse_conv2d_broadcast_add_prelu_4", 
-        "num_inputs": "4", 
+        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_prelu_5", 
+        "num_inputs": "5", 
         "num_outputs": "1"
       }, 
-      "inputs": [[61, 0, 0], [62, 0, 0], [63, 0, 0], [64, 0, 0]]
+      "inputs": [[72, 0, 0], [73, 0, 0], [74, 0, 0], [75, 0, 0], [76, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "res_3_block3_conv_proj_conv2d_weight_sc", 
+      "name": "res_3_block3_conv_proj_conv2d_weight", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm16_gamma_mul_div_expand", 
       "inputs": []
     }, 
     {
@@ -447,15 +512,20 @@
       "name": "elemwise_add3", 
       "attrs": {
         "flatten_data": "0", 
-        "func_name": "fuse_conv2d_broadcast_add_elemwise_add", 
-        "num_inputs": "4", 
+        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_elemwise_add", 
+        "num_inputs": "5", 
         "num_outputs": "1"
       }, 
-      "inputs": [[65, 0, 0], [66, 0, 0], [67, 0, 0], [56, 0, 0]]
+      "inputs": [[77, 0, 0], [78, 0, 0], [79, 0, 0], [80, 0, 0], [67, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "dconv_34_conv_sep_conv2d_weight_sc", 
+      "name": "dconv_34_conv_sep_conv2d_weight", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm17_gamma_mul_div_expand", 
       "inputs": []
     }, 
     {
@@ -473,15 +543,20 @@
       "name": "prelu12", 
       "attrs": {
         "flatten_data": "0", 
-        "func_name": "fuse_conv2d_broadcast_add_prelu_5", 
-        "num_inputs": "4", 
+        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_prelu_6", 
+        "num_inputs": "5", 
         "num_outputs": "1"
       }, 
-      "inputs": [[68, 0, 0], [69, 0, 0], [70, 0, 0], [71, 0, 0]]
+      "inputs": [[81, 0, 0], [82, 0, 0], [83, 0, 0], [84, 0, 0], [85, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "dconv_34_conv_dw_conv2d_weight_sc", 
+      "name": "dconv_34_conv_dw_conv2d_weight", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm18_gamma_mul_div_expand", 
       "inputs": []
     }, 
     {
@@ -499,15 +574,20 @@
       "name": "prelu13", 
       "attrs": {
         "flatten_data": "0", 
-        "func_name": "fuse_conv2d_broadcast_add_prelu_6", 
-        "num_inputs": "4", 
+        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_prelu_7", 
+        "num_inputs": "5", 
         "num_outputs": "1"
       }, 
-      "inputs": [[72, 0, 0], [73, 0, 0], [74, 0, 0], [75, 0, 0]]
+      "inputs": [[86, 0, 0], [87, 0, 0], [88, 0, 0], [89, 0, 0], [90, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "dconv_34_conv_proj_conv2d_weight_sc", 
+      "name": "dconv_34_conv_proj_conv2d_weight", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm19_gamma_mul_div_expand", 
       "inputs": []
     }, 
     {
@@ -520,11 +600,11 @@
       "name": "batch_norm19_out", 
       "attrs": {
         "flatten_data": "0", 
-        "func_name": "fuse_conv2d_broadcast_add_1", 
-        "num_inputs": "3", 
+        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_1", 
+        "num_inputs": "4", 
         "num_outputs": "1"
       }, 
-      "inputs": [[76, 0, 0], [77, 0, 0], [78, 0, 0]]
+      "inputs": [[91, 0, 0], [92, 0, 0], [93, 0, 0], [94, 0, 0]]
     }, 
     {
       "op": "null", 
@@ -551,15 +631,20 @@
       "name": "prelu14", 
       "attrs": {
         "flatten_data": "0", 
-        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_prelu_1", 
+        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_prelu_8", 
         "num_inputs": "5", 
         "num_outputs": "1"
       }, 
-      "inputs": [[79, 0, 0], [80, 0, 0], [81, 0, 0], [82, 0, 0], [83, 0, 0]]
+      "inputs": [[95, 0, 0], [96, 0, 0], [97, 0, 0], [98, 0, 0], [99, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "res_4_block0_conv_dw_conv2d_weight_sc", 
+      "name": "res_4_block0_conv_dw_conv2d_weight", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm21_gamma_mul_div_expand", 
       "inputs": []
     }, 
     {
@@ -577,15 +662,20 @@
       "name": "prelu15", 
       "attrs": {
         "flatten_data": "0", 
-        "func_name": "fuse_conv2d_broadcast_add_prelu_7", 
-        "num_inputs": "4", 
+        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_prelu_9", 
+        "num_inputs": "5", 
         "num_outputs": "1"
       }, 
-      "inputs": [[84, 0, 0], [85, 0, 0], [86, 0, 0], [87, 0, 0]]
+      "inputs": [[100, 0, 0], [101, 0, 0], [102, 0, 0], [103, 0, 0], [104, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "res_4_block0_conv_proj_conv2d_weight_sc", 
+      "name": "res_4_block0_conv_proj_conv2d_weight", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm22_gamma_mul_div_expand", 
       "inputs": []
     }, 
     {
@@ -598,11 +688,11 @@
       "name": "elemwise_add4", 
       "attrs": {
         "flatten_data": "0", 
-        "func_name": "fuse_conv2d_broadcast_add_elemwise_add_1", 
-        "num_inputs": "4", 
+        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_elemwise_add_1", 
+        "num_inputs": "5", 
         "num_outputs": "1"
       }, 
-      "inputs": [[88, 0, 0], [89, 0, 0], [90, 0, 0], [79, 0, 0]]
+      "inputs": [[105, 0, 0], [106, 0, 0], [107, 0, 0], [108, 0, 0], [95, 0, 0]]
     }, 
     {
       "op": "null", 
@@ -629,15 +719,20 @@
       "name": "prelu16", 
       "attrs": {
         "flatten_data": "0", 
-        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_prelu_1", 
+        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_prelu_8", 
         "num_inputs": "5", 
         "num_outputs": "1"
       }, 
-      "inputs": [[91, 0, 0], [92, 0, 0], [93, 0, 0], [94, 0, 0], [95, 0, 0]]
+      "inputs": [[109, 0, 0], [110, 0, 0], [111, 0, 0], [112, 0, 0], [113, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "res_4_block1_conv_dw_conv2d_weight_sc", 
+      "name": "res_4_block1_conv_dw_conv2d_weight", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm24_gamma_mul_div_expand", 
       "inputs": []
     }, 
     {
@@ -655,15 +750,20 @@
       "name": "prelu17", 
       "attrs": {
         "flatten_data": "0", 
-        "func_name": "fuse_conv2d_broadcast_add_prelu_7", 
-        "num_inputs": "4", 
+        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_prelu_9", 
+        "num_inputs": "5", 
         "num_outputs": "1"
       }, 
-      "inputs": [[96, 0, 0], [97, 0, 0], [98, 0, 0], [99, 0, 0]]
+      "inputs": [[114, 0, 0], [115, 0, 0], [116, 0, 0], [117, 0, 0], [118, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "res_4_block1_conv_proj_conv2d_weight_sc", 
+      "name": "res_4_block1_conv_proj_conv2d_weight", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm25_gamma_mul_div_expand", 
       "inputs": []
     }, 
     {
@@ -676,11 +776,11 @@
       "name": "elemwise_add5", 
       "attrs": {
         "flatten_data": "0", 
-        "func_name": "fuse_conv2d_broadcast_add_elemwise_add_1", 
-        "num_inputs": "4", 
+        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_elemwise_add_1", 
+        "num_inputs": "5", 
         "num_outputs": "1"
       }, 
-      "inputs": [[100, 0, 0], [101, 0, 0], [102, 0, 0], [91, 0, 0]]
+      "inputs": [[119, 0, 0], [120, 0, 0], [121, 0, 0], [122, 0, 0], [109, 0, 0]]
     }, 
     {
       "op": "null", 
@@ -707,15 +807,20 @@
       "name": "prelu18", 
       "attrs": {
         "flatten_data": "0", 
-        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_prelu_1", 
+        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_prelu_8", 
         "num_inputs": "5", 
         "num_outputs": "1"
       }, 
-      "inputs": [[103, 0, 0], [104, 0, 0], [105, 0, 0], [106, 0, 0], [107, 0, 0]]
+      "inputs": [[123, 0, 0], [124, 0, 0], [125, 0, 0], [126, 0, 0], [127, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "res_4_block2_conv_dw_conv2d_weight_sc", 
+      "name": "res_4_block2_conv_dw_conv2d_weight", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm27_gamma_mul_div_expand", 
       "inputs": []
     }, 
     {
@@ -733,15 +838,20 @@
       "name": "prelu19", 
       "attrs": {
         "flatten_data": "0", 
-        "func_name": "fuse_conv2d_broadcast_add_prelu_7", 
-        "num_inputs": "4", 
+        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_prelu_9", 
+        "num_inputs": "5", 
         "num_outputs": "1"
       }, 
-      "inputs": [[108, 0, 0], [109, 0, 0], [110, 0, 0], [111, 0, 0]]
+      "inputs": [[128, 0, 0], [129, 0, 0], [130, 0, 0], [131, 0, 0], [132, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "res_4_block2_conv_proj_conv2d_weight_sc", 
+      "name": "res_4_block2_conv_proj_conv2d_weight", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm28_gamma_mul_div_expand", 
       "inputs": []
     }, 
     {
@@ -754,11 +864,11 @@
       "name": "elemwise_add6", 
       "attrs": {
         "flatten_data": "0", 
-        "func_name": "fuse_conv2d_broadcast_add_elemwise_add_1", 
-        "num_inputs": "4", 
+        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_elemwise_add_1", 
+        "num_inputs": "5", 
         "num_outputs": "1"
       }, 
-      "inputs": [[112, 0, 0], [113, 0, 0], [114, 0, 0], [103, 0, 0]]
+      "inputs": [[133, 0, 0], [134, 0, 0], [135, 0, 0], [136, 0, 0], [123, 0, 0]]
     }, 
     {
       "op": "null", 
@@ -785,15 +895,20 @@
       "name": "prelu20", 
       "attrs": {
         "flatten_data": "0", 
-        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_prelu_1", 
+        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_prelu_8", 
         "num_inputs": "5", 
         "num_outputs": "1"
       }, 
-      "inputs": [[115, 0, 0], [116, 0, 0], [117, 0, 0], [118, 0, 0], [119, 0, 0]]
+      "inputs": [[137, 0, 0], [138, 0, 0], [139, 0, 0], [140, 0, 0], [141, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "res_4_block3_conv_dw_conv2d_weight_sc", 
+      "name": "res_4_block3_conv_dw_conv2d_weight", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm30_gamma_mul_div_expand", 
       "inputs": []
     }, 
     {
@@ -811,15 +926,20 @@
       "name": "prelu21", 
       "attrs": {
         "flatten_data": "0", 
-        "func_name": "fuse_conv2d_broadcast_add_prelu_7", 
-        "num_inputs": "4", 
+        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_prelu_9", 
+        "num_inputs": "5", 
         "num_outputs": "1"
       }, 
-      "inputs": [[120, 0, 0], [121, 0, 0], [122, 0, 0], [123, 0, 0]]
+      "inputs": [[142, 0, 0], [143, 0, 0], [144, 0, 0], [145, 0, 0], [146, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "res_4_block3_conv_proj_conv2d_weight_sc", 
+      "name": "res_4_block3_conv_proj_conv2d_weight", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm31_gamma_mul_div_expand", 
       "inputs": []
     }, 
     {
@@ -832,11 +952,11 @@
       "name": "elemwise_add7", 
       "attrs": {
         "flatten_data": "0", 
-        "func_name": "fuse_conv2d_broadcast_add_elemwise_add_1", 
-        "num_inputs": "4", 
+        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_elemwise_add_1", 
+        "num_inputs": "5", 
         "num_outputs": "1"
       }, 
-      "inputs": [[124, 0, 0], [125, 0, 0], [126, 0, 0], [115, 0, 0]]
+      "inputs": [[147, 0, 0], [148, 0, 0], [149, 0, 0], [150, 0, 0], [137, 0, 0]]
     }, 
     {
       "op": "null", 
@@ -863,15 +983,20 @@
       "name": "prelu22", 
       "attrs": {
         "flatten_data": "0", 
-        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_prelu_1", 
+        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_prelu_8", 
         "num_inputs": "5", 
         "num_outputs": "1"
       }, 
-      "inputs": [[127, 0, 0], [128, 0, 0], [129, 0, 0], [130, 0, 0], [131, 0, 0]]
+      "inputs": [[151, 0, 0], [152, 0, 0], [153, 0, 0], [154, 0, 0], [155, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "res_4_block4_conv_dw_conv2d_weight_sc", 
+      "name": "res_4_block4_conv_dw_conv2d_weight", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm33_gamma_mul_div_expand", 
       "inputs": []
     }, 
     {
@@ -889,15 +1014,20 @@
       "name": "prelu23", 
       "attrs": {
         "flatten_data": "0", 
-        "func_name": "fuse_conv2d_broadcast_add_prelu_7", 
-        "num_inputs": "4", 
+        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_prelu_9", 
+        "num_inputs": "5", 
         "num_outputs": "1"
       }, 
-      "inputs": [[132, 0, 0], [133, 0, 0], [134, 0, 0], [135, 0, 0]]
+      "inputs": [[156, 0, 0], [157, 0, 0], [158, 0, 0], [159, 0, 0], [160, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "res_4_block4_conv_proj_conv2d_weight_sc", 
+      "name": "res_4_block4_conv_proj_conv2d_weight", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm34_gamma_mul_div_expand", 
       "inputs": []
     }, 
     {
@@ -910,11 +1040,11 @@
       "name": "elemwise_add8", 
       "attrs": {
         "flatten_data": "0", 
-        "func_name": "fuse_conv2d_broadcast_add_elemwise_add_1", 
-        "num_inputs": "4", 
+        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_elemwise_add_1", 
+        "num_inputs": "5", 
         "num_outputs": "1"
       }, 
-      "inputs": [[136, 0, 0], [137, 0, 0], [138, 0, 0], [127, 0, 0]]
+      "inputs": [[161, 0, 0], [162, 0, 0], [163, 0, 0], [164, 0, 0], [151, 0, 0]]
     }, 
     {
       "op": "null", 
@@ -941,15 +1071,20 @@
       "name": "prelu24", 
       "attrs": {
         "flatten_data": "0", 
-        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_prelu_1", 
+        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_prelu_8", 
         "num_inputs": "5", 
         "num_outputs": "1"
       }, 
-      "inputs": [[139, 0, 0], [140, 0, 0], [141, 0, 0], [142, 0, 0], [143, 0, 0]]
+      "inputs": [[165, 0, 0], [166, 0, 0], [167, 0, 0], [168, 0, 0], [169, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "res_4_block5_conv_dw_conv2d_weight_sc", 
+      "name": "res_4_block5_conv_dw_conv2d_weight", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm36_gamma_mul_div_expand", 
       "inputs": []
     }, 
     {
@@ -967,15 +1102,20 @@
       "name": "prelu25", 
       "attrs": {
         "flatten_data": "0", 
-        "func_name": "fuse_conv2d_broadcast_add_prelu_7", 
-        "num_inputs": "4", 
+        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_prelu_9", 
+        "num_inputs": "5", 
         "num_outputs": "1"
       }, 
-      "inputs": [[144, 0, 0], [145, 0, 0], [146, 0, 0], [147, 0, 0]]
+      "inputs": [[170, 0, 0], [171, 0, 0], [172, 0, 0], [173, 0, 0], [174, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "res_4_block5_conv_proj_conv2d_weight_sc", 
+      "name": "res_4_block5_conv_proj_conv2d_weight", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm37_gamma_mul_div_expand", 
       "inputs": []
     }, 
     {
@@ -988,15 +1128,20 @@
       "name": "elemwise_add9", 
       "attrs": {
         "flatten_data": "0", 
-        "func_name": "fuse_conv2d_broadcast_add_elemwise_add_1", 
-        "num_inputs": "4", 
+        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_elemwise_add_1", 
+        "num_inputs": "5", 
         "num_outputs": "1"
       }, 
-      "inputs": [[148, 0, 0], [149, 0, 0], [150, 0, 0], [139, 0, 0]]
+      "inputs": [[175, 0, 0], [176, 0, 0], [177, 0, 0], [178, 0, 0], [165, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "dconv_45_conv_sep_conv2d_weight_sc", 
+      "name": "dconv_45_conv_sep_conv2d_weight", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm38_gamma_mul_div_expand", 
       "inputs": []
     }, 
     {
@@ -1014,15 +1159,20 @@
       "name": "prelu26", 
       "attrs": {
         "flatten_data": "0", 
-        "func_name": "fuse_conv2d_broadcast_add_prelu_8", 
-        "num_inputs": "4", 
+        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_prelu_10", 
+        "num_inputs": "5", 
         "num_outputs": "1"
       }, 
-      "inputs": [[151, 0, 0], [152, 0, 0], [153, 0, 0], [154, 0, 0]]
+      "inputs": [[179, 0, 0], [180, 0, 0], [181, 0, 0], [182, 0, 0], [183, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "dconv_45_conv_dw_conv2d_weight_sc", 
+      "name": "dconv_45_conv_dw_conv2d_weight", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm39_gamma_mul_div_expand", 
       "inputs": []
     }, 
     {
@@ -1040,15 +1190,20 @@
       "name": "prelu27", 
       "attrs": {
         "flatten_data": "0", 
-        "func_name": "fuse_conv2d_broadcast_add_prelu_9", 
-        "num_inputs": "4", 
+        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_prelu_11", 
+        "num_inputs": "5", 
         "num_outputs": "1"
       }, 
-      "inputs": [[155, 0, 0], [156, 0, 0], [157, 0, 0], [158, 0, 0]]
+      "inputs": [[184, 0, 0], [185, 0, 0], [186, 0, 0], [187, 0, 0], [188, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "dconv_45_conv_proj_conv2d_weight_sc", 
+      "name": "dconv_45_conv_proj_conv2d_weight", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm40_gamma_mul_div_expand", 
       "inputs": []
     }, 
     {
@@ -1061,11 +1216,11 @@
       "name": "batch_norm40_out", 
       "attrs": {
         "flatten_data": "0", 
-        "func_name": "fuse_conv2d_broadcast_add_2", 
-        "num_inputs": "3", 
+        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_2", 
+        "num_inputs": "4", 
         "num_outputs": "1"
       }, 
-      "inputs": [[159, 0, 0], [160, 0, 0], [161, 0, 0]]
+      "inputs": [[189, 0, 0], [190, 0, 0], [191, 0, 0], [192, 0, 0]]
     }, 
     {
       "op": "null", 
@@ -1092,15 +1247,20 @@
       "name": "prelu28", 
       "attrs": {
         "flatten_data": "0", 
-        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_prelu_2", 
+        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_prelu_12", 
         "num_inputs": "5", 
         "num_outputs": "1"
       }, 
-      "inputs": [[162, 0, 0], [163, 0, 0], [164, 0, 0], [165, 0, 0], [166, 0, 0]]
+      "inputs": [[193, 0, 0], [194, 0, 0], [195, 0, 0], [196, 0, 0], [197, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "res_5_block0_conv_dw_conv2d_weight_sc", 
+      "name": "res_5_block0_conv_dw_conv2d_weight", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm42_gamma_mul_div_expand", 
       "inputs": []
     }, 
     {
@@ -1118,15 +1278,20 @@
       "name": "prelu29", 
       "attrs": {
         "flatten_data": "0", 
-        "func_name": "fuse_conv2d_broadcast_add_prelu_10", 
-        "num_inputs": "4", 
+        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_prelu_13", 
+        "num_inputs": "5", 
         "num_outputs": "1"
       }, 
-      "inputs": [[167, 0, 0], [168, 0, 0], [169, 0, 0], [170, 0, 0]]
+      "inputs": [[198, 0, 0], [199, 0, 0], [200, 0, 0], [201, 0, 0], [202, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "res_5_block0_conv_proj_conv2d_weight_sc", 
+      "name": "res_5_block0_conv_proj_conv2d_weight", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm43_gamma_mul_div_expand", 
       "inputs": []
     }, 
     {
@@ -1139,11 +1304,11 @@
       "name": "elemwise_add10", 
       "attrs": {
         "flatten_data": "0", 
-        "func_name": "fuse_conv2d_broadcast_add_elemwise_add_2", 
-        "num_inputs": "4", 
+        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_elemwise_add_2", 
+        "num_inputs": "5", 
         "num_outputs": "1"
       }, 
-      "inputs": [[171, 0, 0], [172, 0, 0], [173, 0, 0], [162, 0, 0]]
+      "inputs": [[203, 0, 0], [204, 0, 0], [205, 0, 0], [206, 0, 0], [193, 0, 0]]
     }, 
     {
       "op": "null", 
@@ -1170,15 +1335,20 @@
       "name": "prelu30", 
       "attrs": {
         "flatten_data": "0", 
-        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_prelu_2", 
+        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_prelu_12", 
         "num_inputs": "5", 
         "num_outputs": "1"
       }, 
-      "inputs": [[174, 0, 0], [175, 0, 0], [176, 0, 0], [177, 0, 0], [178, 0, 0]]
+      "inputs": [[207, 0, 0], [208, 0, 0], [209, 0, 0], [210, 0, 0], [211, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "res_5_block1_conv_dw_conv2d_weight_sc", 
+      "name": "res_5_block1_conv_dw_conv2d_weight", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm45_gamma_mul_div_expand", 
       "inputs": []
     }, 
     {
@@ -1196,15 +1366,20 @@
       "name": "prelu31", 
       "attrs": {
         "flatten_data": "0", 
-        "func_name": "fuse_conv2d_broadcast_add_prelu_10", 
-        "num_inputs": "4", 
+        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_prelu_13", 
+        "num_inputs": "5", 
         "num_outputs": "1"
       }, 
-      "inputs": [[179, 0, 0], [180, 0, 0], [181, 0, 0], [182, 0, 0]]
+      "inputs": [[212, 0, 0], [213, 0, 0], [214, 0, 0], [215, 0, 0], [216, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "res_5_block1_conv_proj_conv2d_weight_sc", 
+      "name": "res_5_block1_conv_proj_conv2d_weight", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm46_gamma_mul_div_expand", 
       "inputs": []
     }, 
     {
@@ -1217,15 +1392,20 @@
       "name": "elemwise_add11", 
       "attrs": {
         "flatten_data": "0", 
-        "func_name": "fuse_conv2d_broadcast_add_elemwise_add_2", 
-        "num_inputs": "4", 
+        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_elemwise_add_2", 
+        "num_inputs": "5", 
         "num_outputs": "1"
       }, 
-      "inputs": [[183, 0, 0], [184, 0, 0], [185, 0, 0], [174, 0, 0]]
+      "inputs": [[217, 0, 0], [218, 0, 0], [219, 0, 0], [220, 0, 0], [207, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "conv_6sep_conv2d_weight_sc", 
+      "name": "conv_6sep_conv2d_weight", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm47_gamma_mul_div_expand", 
       "inputs": []
     }, 
     {
@@ -1243,15 +1423,20 @@
       "name": "prelu32", 
       "attrs": {
         "flatten_data": "0", 
-        "func_name": "fuse_conv2d_broadcast_add_prelu_11", 
-        "num_inputs": "4", 
+        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_prelu_14", 
+        "num_inputs": "5", 
         "num_outputs": "1"
       }, 
-      "inputs": [[186, 0, 0], [187, 0, 0], [188, 0, 0], [189, 0, 0]]
+      "inputs": [[221, 0, 0], [222, 0, 0], [223, 0, 0], [224, 0, 0], [225, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "conv_6dw7_7_conv2d_weight_sc", 
+      "name": "conv_6dw7_7_conv2d_weight", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batch_norm48_gamma_mul_div_expand", 
       "inputs": []
     }, 
     {
@@ -1264,11 +1449,11 @@
       "name": "batch_norm48_out", 
       "attrs": {
         "flatten_data": "0", 
-        "func_name": "fuse_conv2d_broadcast_add_3", 
-        "num_inputs": "3", 
+        "func_name": "fuse_conv2d_broadcast_mul_broadcast_add_3", 
+        "num_inputs": "4", 
         "num_outputs": "1"
       }, 
-      "inputs": [[190, 0, 0], [191, 0, 0], [192, 0, 0]]
+      "inputs": [[226, 0, 0], [227, 0, 0], [228, 0, 0], [229, 0, 0]]
     }, 
     {
       "op": "tvm_op", 
@@ -1279,7 +1464,7 @@
         "num_inputs": "1", 
         "num_outputs": "1"
       }, 
-      "inputs": [[193, 0, 0]]
+      "inputs": [[230, 0, 0]]
     }, 
     {
       "op": "null", 
@@ -1310,7 +1495,7 @@
         "num_inputs": "5", 
         "num_outputs": "1"
       }, 
-      "inputs": [[194, 0, 0], [195, 0, 0], [196, 0, 0], [197, 0, 0], [198, 0, 0]]
+      "inputs": [[231, 0, 0], [232, 0, 0], [233, 0, 0], [234, 0, 0], [235, 0, 0]]
     }
   ], 
   "arg_nodes": [
@@ -1318,33 +1503,35 @@
     2, 
     3, 
     4, 
-    6, 
+    5, 
     7, 
     8, 
+    9, 
     10, 
-    11, 
     12, 
+    13, 
     14, 
     15, 
-    16, 
+    17, 
     18, 
     19, 
-    21, 
+    20, 
     22, 
     23, 
     24, 
     26, 
     27, 
     28, 
-    30, 
+    29, 
     31, 
+    32, 
     33, 
     34, 
-    35, 
     36, 
+    37, 
     38, 
-    39, 
     40, 
+    41, 
     42, 
     43, 
     45, 
@@ -1356,112 +1543,147 @@
     52, 
     54, 
     55, 
+    56, 
     57, 
-    58, 
     59, 
     60, 
+    61, 
     62, 
-    63, 
     64, 
+    65, 
     66, 
-    67, 
+    68, 
     69, 
     70, 
     71, 
     73, 
     74, 
     75, 
-    77, 
+    76, 
     78, 
+    79, 
     80, 
-    81, 
     82, 
     83, 
+    84, 
     85, 
-    86, 
     87, 
+    88, 
     89, 
     90, 
     92, 
     93, 
     94, 
-    95, 
+    96, 
     97, 
     98, 
     99, 
     101, 
     102, 
+    103, 
     104, 
-    105, 
     106, 
     107, 
-    109, 
+    108, 
     110, 
     111, 
+    112, 
     113, 
-    114, 
+    115, 
     116, 
     117, 
     118, 
-    119, 
+    120, 
     121, 
     122, 
-    123, 
+    124, 
     125, 
     126, 
-    128, 
+    127, 
     129, 
     130, 
     131, 
-    133, 
+    132, 
     134, 
     135, 
-    137, 
+    136, 
     138, 
+    139, 
     140, 
     141, 
-    142, 
     143, 
+    144, 
     145, 
     146, 
-    147, 
+    148, 
     149, 
     150, 
     152, 
     153, 
     154, 
-    156, 
+    155, 
     157, 
     158, 
+    159, 
     160, 
-    161, 
+    162, 
     163, 
     164, 
-    165, 
     166, 
+    167, 
     168, 
     169, 
-    170, 
+    171, 
     172, 
     173, 
-    175, 
+    174, 
     176, 
     177, 
     178, 
     180, 
     181, 
     182, 
-    184, 
+    183, 
     185, 
+    186, 
     187, 
     188, 
-    189, 
+    190, 
     191, 
     192, 
+    194, 
     195, 
     196, 
     197, 
-    198
+    199, 
+    200, 
+    201, 
+    202, 
+    204, 
+    205, 
+    206, 
+    208, 
+    209, 
+    210, 
+    211, 
+    213, 
+    214, 
+    215, 
+    216, 
+    218, 
+    219, 
+    220, 
+    222, 
+    223, 
+    224, 
+    225, 
+    227, 
+    228, 
+    229, 
+    232, 
+    233, 
+    234, 
+    235
   ], 
   "node_row_ptr": [
     0, 
@@ -1664,9 +1886,46 @@
     197, 
     198, 
     199, 
-    200
+    200, 
+    201, 
+    202, 
+    203, 
+    204, 
+    205, 
+    206, 
+    207, 
+    208, 
+    209, 
+    210, 
+    211, 
+    212, 
+    213, 
+    214, 
+    215, 
+    216, 
+    217, 
+    218, 
+    219, 
+    220, 
+    221, 
+    222, 
+    223, 
+    224, 
+    225, 
+    226, 
+    227, 
+    228, 
+    229, 
+    230, 
+    231, 
+    232, 
+    233, 
+    234, 
+    235, 
+    236, 
+    237
   ], 
-  "heads": [[199, 0, 0]], 
+  "heads": [[236, 0, 0]], 
   "attrs": {
     "storage_id": ["list_int", [
         6, 
@@ -1674,31 +1933,29 @@
         7, 
         8, 
         9, 
-        1, 
         10, 
+        1, 
         11, 
         12, 
-        0, 
         13, 
         14, 
+        0, 
         15, 
-        1, 
         16, 
         17, 
         18, 
-        0, 
+        1, 
         19, 
         20, 
-        1, 
         21, 
         22, 
+        0, 
         23, 
         24, 
-        0, 
         25, 
+        1, 
         26, 
         27, 
-        2, 
         28, 
         29, 
         0, 
@@ -1710,78 +1967,74 @@
         34, 
         35, 
         36, 
-        1, 
+        0, 
         37, 
         38, 
-        2, 
         39, 
         40, 
+        2, 
         41, 
         42, 
-        0, 
         43, 
         44, 
-        45, 
         1, 
+        45, 
         46, 
         47, 
-        0, 
+        2, 
         48, 
         49, 
         50, 
         51, 
-        2, 
+        0, 
         52, 
         53, 
         54, 
-        1, 
         55, 
+        1, 
         56, 
-        2, 
         57, 
         58, 
-        59, 
         0, 
+        59, 
         60, 
         61, 
         62, 
         2, 
         63, 
         64, 
-        0, 
         65, 
         66, 
+        1, 
         67, 
         68, 
-        2, 
         69, 
+        2, 
         70, 
         71, 
-        1, 
         72, 
         73, 
-        2, 
+        0, 
         74, 
         75, 
         76, 
         77, 
-        0, 
+        2, 
         78, 
         79, 
         80, 
-        1, 
+        0, 
         81, 
         82, 
-        0, 
         83, 
         84, 
+        2, 
         85, 
         86, 
-        2, 
         87, 
         88, 
-        89, 
         1, 
+        89, 
         90, 
         91, 
         2, 
@@ -1793,83 +2046,163 @@
         96, 
         97, 
         98, 
-        1, 
         99, 
+        1, 
         100, 
-        0, 
         101, 
         102, 
+        0, 
         103, 
         104, 
-        2, 
         105, 
         106, 
+        2, 
         107, 
-        1, 
         108, 
         109, 
-        2, 
         110, 
+        1, 
         111, 
         112, 
         113, 
-        0, 
+        2, 
         114, 
         115, 
         116, 
-        1, 
         117, 
-        118, 
         0, 
+        118, 
         119, 
         120, 
         121, 
-        2, 
+        1, 
         122, 
         123, 
         124, 
         0, 
         125, 
         126, 
-        2, 
         127, 
         128, 
+        2, 
         129, 
         130, 
-        0, 
         131, 
         132, 
+        1, 
         133, 
-        3, 
         134, 
         135, 
-        4, 
+        2, 
         136, 
         137, 
         138, 
         139, 
-        3, 
+        0, 
         140, 
         141, 
         142, 
-        2, 
         143, 
+        1, 
         144, 
-        3, 
         145, 
         146, 
+        0, 
         147, 
-        2, 
         148, 
         149, 
-        4, 
-        5, 
         150, 
+        2, 
         151, 
         152, 
         153, 
+        154, 
+        0, 
+        155, 
+        156, 
+        157, 
+        2, 
+        158, 
+        159, 
+        160, 
+        161, 
+        0, 
+        162, 
+        163, 
+        164, 
+        165, 
+        3, 
+        166, 
+        167, 
+        168, 
+        4, 
+        169, 
+        170, 
+        171, 
+        172, 
+        3, 
+        173, 
+        174, 
+        175, 
+        176, 
+        2, 
+        177, 
+        178, 
+        179, 
+        3, 
+        180, 
+        181, 
+        182, 
+        183, 
+        2, 
+        184, 
+        185, 
+        186, 
+        4, 
+        5, 
+        187, 
+        188, 
+        189, 
+        190, 
         4]], 
     "dtype": ["list_int", [
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
+        0, 
         0, 
         0, 
         0, 
@@ -2270,27 +2603,69 @@
         "float32", 
         "float32", 
         "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
+        "float32", 
         "float32"]], 
     "shape": ["list_shape", [
         [1, 3, 112, 112], 
         [1, 3, 112, 112], 
         [64, 3, 3, 3], 
         [64, 1, 1], 
+        [64, 1, 1], 
         [64], 
         [1, 64, 56, 56], 
         [64, 1, 3, 3], 
         [64, 1, 1], 
+        [64, 1, 1], 
         [64], 
         [1, 64, 56, 56], 
         [128, 64, 1, 1], 
+        [128, 1, 1], 
         [128, 1, 1], 
         [128], 
         [1, 128, 56, 56], 
         [128, 1, 3, 3], 
         [128, 1, 1], 
+        [128, 1, 1], 
         [128], 
         [1, 128, 28, 28], 
         [64, 128, 1, 1], 
+        [64, 1, 1], 
         [64, 1, 1], 
         [1, 64, 28, 28], 
         [128, 64, 1, 1], 
@@ -2300,9 +2675,11 @@
         [1, 128, 28, 28], 
         [128, 1, 3, 3], 
         [128, 1, 1], 
+        [128, 1, 1], 
         [128], 
         [1, 128, 28, 28], 
         [64, 128, 1, 1], 
+        [64, 1, 1], 
         [64, 1, 1], 
         [1, 64, 28, 28], 
         [128, 64, 1, 1], 
@@ -2312,9 +2689,11 @@
         [1, 128, 28, 28], 
         [128, 1, 3, 3], 
         [128, 1, 1], 
+        [128, 1, 1], 
         [128], 
         [1, 128, 28, 28], 
         [64, 128, 1, 1], 
+        [64, 1, 1], 
         [64, 1, 1], 
         [1, 64, 28, 28], 
         [128, 64, 1, 1], 
@@ -2324,9 +2703,11 @@
         [1, 128, 28, 28], 
         [128, 1, 3, 3], 
         [128, 1, 1], 
+        [128, 1, 1], 
         [128], 
         [1, 128, 28, 28], 
         [64, 128, 1, 1], 
+        [64, 1, 1], 
         [64, 1, 1], 
         [1, 64, 28, 28], 
         [128, 64, 1, 1], 
@@ -2336,20 +2717,25 @@
         [1, 128, 28, 28], 
         [128, 1, 3, 3], 
         [128, 1, 1], 
+        [128, 1, 1], 
         [128], 
         [1, 128, 28, 28], 
         [64, 128, 1, 1], 
+        [64, 1, 1], 
         [64, 1, 1], 
         [1, 64, 28, 28], 
         [256, 64, 1, 1], 
+        [256, 1, 1], 
         [256, 1, 1], 
         [256], 
         [1, 256, 28, 28], 
         [256, 1, 3, 3], 
         [256, 1, 1], 
+        [256, 1, 1], 
         [256], 
         [1, 256, 14, 14], 
         [128, 256, 1, 1], 
+        [128, 1, 1], 
         [128, 1, 1], 
         [1, 128, 14, 14], 
         [256, 128, 1, 1], 
@@ -2359,9 +2745,11 @@
         [1, 256, 14, 14], 
         [256, 1, 3, 3], 
         [256, 1, 1], 
+        [256, 1, 1], 
         [256], 
         [1, 256, 14, 14], 
         [128, 256, 1, 1], 
+        [128, 1, 1], 
         [128, 1, 1], 
         [1, 128, 14, 14], 
         [256, 128, 1, 1], 
@@ -2371,9 +2759,11 @@
         [1, 256, 14, 14], 
         [256, 1, 3, 3], 
         [256, 1, 1], 
+        [256, 1, 1], 
         [256], 
         [1, 256, 14, 14], 
         [128, 256, 1, 1], 
+        [128, 1, 1], 
         [128, 1, 1], 
         [1, 128, 14, 14], 
         [256, 128, 1, 1], 
@@ -2383,9 +2773,11 @@
         [1, 256, 14, 14], 
         [256, 1, 3, 3], 
         [256, 1, 1], 
+        [256, 1, 1], 
         [256], 
         [1, 256, 14, 14], 
         [128, 256, 1, 1], 
+        [128, 1, 1], 
         [128, 1, 1], 
         [1, 128, 14, 14], 
         [256, 128, 1, 1], 
@@ -2395,9 +2787,11 @@
         [1, 256, 14, 14], 
         [256, 1, 3, 3], 
         [256, 1, 1], 
+        [256, 1, 1], 
         [256], 
         [1, 256, 14, 14], 
         [128, 256, 1, 1], 
+        [128, 1, 1], 
         [128, 1, 1], 
         [1, 128, 14, 14], 
         [256, 128, 1, 1], 
@@ -2407,9 +2801,11 @@
         [1, 256, 14, 14], 
         [256, 1, 3, 3], 
         [256, 1, 1], 
+        [256, 1, 1], 
         [256], 
         [1, 256, 14, 14], 
         [128, 256, 1, 1], 
+        [128, 1, 1], 
         [128, 1, 1], 
         [1, 128, 14, 14], 
         [256, 128, 1, 1], 
@@ -2419,32 +2815,25 @@
         [1, 256, 14, 14], 
         [256, 1, 3, 3], 
         [256, 1, 1], 
+        [256, 1, 1], 
         [256], 
         [1, 256, 14, 14], 
         [128, 256, 1, 1], 
+        [128, 1, 1], 
         [128, 1, 1], 
         [1, 128, 14, 14], 
         [512, 128, 1, 1], 
+        [512, 1, 1], 
         [512, 1, 1], 
         [512], 
         [1, 512, 14, 14], 
         [512, 1, 3, 3], 
         [512, 1, 1], 
+        [512, 1, 1], 
         [512], 
         [1, 512, 7, 7], 
         [128, 512, 1, 1], 
         [128, 1, 1], 
-        [1, 128, 7, 7], 
-        [256, 128, 1, 1], 
-        [256, 1, 1], 
-        [256, 1, 1], 
-        [256], 
-        [1, 256, 7, 7], 
-        [256, 1, 3, 3], 
-        [256, 1, 1], 
-        [256], 
-        [1, 256, 7, 7], 
-        [128, 256, 1, 1], 
         [128, 1, 1], 
         [1, 128, 7, 7], 
         [256, 128, 1, 1], 
@@ -2454,16 +2843,34 @@
         [1, 256, 7, 7], 
         [256, 1, 3, 3], 
         [256, 1, 1], 
+        [256, 1, 1], 
         [256], 
         [1, 256, 7, 7], 
         [128, 256, 1, 1], 
+        [128, 1, 1], 
+        [128, 1, 1], 
+        [1, 128, 7, 7], 
+        [256, 128, 1, 1], 
+        [256, 1, 1], 
+        [256, 1, 1], 
+        [256], 
+        [1, 256, 7, 7], 
+        [256, 1, 3, 3], 
+        [256, 1, 1], 
+        [256, 1, 1], 
+        [256], 
+        [1, 256, 7, 7], 
+        [128, 256, 1, 1], 
+        [128, 1, 1], 
         [128, 1, 1], 
         [1, 128, 7, 7], 
         [512, 128, 1, 1], 
         [512, 1, 1], 
+        [512, 1, 1], 
         [512], 
         [1, 512, 7, 7], 
         [512, 1, 7, 7], 
+        [512, 1, 1], 
         [512, 1, 1], 
         [1, 512, 1, 1], 
         [1, 512], 

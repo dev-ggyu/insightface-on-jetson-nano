@@ -30,7 +30,7 @@ tvm_data_shape = (1, 3, 112, 112)
 #512dim
 #tvm_face_similarity_threshold = 24
 #128dim
-tvm_face_similarity_threshold = 20 
+tvm_face_similarity_threshold = 21
 #tvm_face_similarity_threshold = 1.8
 #tvm known data
 tvm_faces_dir="{}/images/".format(BASE_PATH)
@@ -48,6 +48,14 @@ tvm_fd_data_shape = (1, 3, 112, 112)
 tvm_fd_nms = 0.4
 tvm_fd_rac = 'net3'
 
+tvm_mtcnn_model_name="mtcnn/tvm"
+tvm_mtcnn_dir="{}/model/{}/".format(BASE_PATH,tvm_mtcnn_model_name)
+tvm_mtcnn_graph_json = tvm_mtcnn_dir+"{}_deploy_graph.json"
+tvm_mtcnn_lib = tvm_mtcnn_dir+"{}_deploy_lib.so"
+tvm_mtcnn_params = tvm_mtcnn_dir+"{}_deploy_param.params"
+tvm_mtcnn_data_shape = (1, 3, 112, 112)
+
+#
 #tpu config
 tpu_model_dir = '{}/../all_models/'.format(BASE_PATH)
 #/home/crsarang/works/ml/tpu/project/../all_models/mobilenet_ssd_v2_face_quant_postprocess_edgetpu.tflite
