@@ -1,6 +1,5 @@
 # insightface-on-jetson-nano
-insightface on jetson nano 
-
+insightface on jetson nano
 
 # prepare environment
 ## 1 apt
