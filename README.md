@@ -3,6 +3,7 @@ insightface on jetson nano
 
 # prepare environment
 ## 1 apt
+
 sudo apt update
 sudo apt install -y  git cmake python python-dev python-setuptools gcc libtinfo-dev zlib1g-dev
 sudo apt install clang lldb lld
