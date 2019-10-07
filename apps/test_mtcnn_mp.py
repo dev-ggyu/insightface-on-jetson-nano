@@ -53,39 +53,42 @@ class App(Cam):
 		
 		
 		_similar_faces = []
+		_isInferenceTime=False
 		if  _faces!=None and 0 < len(_faces):
-			
+			if(1000<(start_time-self.last_time) * 1000):
+				_isInferenceTime=True
+				self.last_time = time.monotonic()
+
 			for _face in _faces:
 				box = _face.bounding_box.flatten().astype("int")
 				(startX, startY, endX, endY) = box
-				
-				if(1000<(start_time-self.last_time) * 1000):
-					self.inQ.put((bgr[startY:endY,startX:endX],box))
-					self.last_time = time.monotonic()
+				if(_isInferenceTime==True):
+					self.inQ.put((bgr,box))
 				cv2.rectangle(bgr, (startX, startY), (endX, endY),(255,0,0), 2)
 				
 
-			if(0<outQ.qsize()):
-				roc_image,roc_box,name =outQ.get()
-				(left, top, right, bottom) = roc_box
+		if(0<outQ.qsize()):
+			roc_image,roc_box,name =outQ.get()
+			(left, top, right, bottom) = roc_box
 
-				#top down merge #vertical
-				if(self.concat_index%6==0): #122 =6  336,2
-					self.concat_index=0
-				
-				h=(112*self.concat_index)
-				#print('{}{}'.format(roc_image.shape,self.recognition_faces.shape))
-				self.recognition_faces[h:h+112,:,:] = cv2.resize(roc_image[top:bottom,left:right], (112, 112))
-				cv2.rectangle(self.recognition_faces, (0, h+112-15), (112, h+112),(255,0,0), cv2.FILLED)
-				cv2.putText(self.recognition_faces, name, (0+3, h+112-3), cv2.FONT_HERSHEY_PLAIN, 1, (255,255,255))
-				self.concat_index=self.concat_index+1
-				#self.recognition_faces = np.vstack((self.recognition_faces,roc_image) )
+			#top down merge #vertical
+			if(self.concat_index%6==0): #122 =6  336,2
+				self.concat_index=0
+			
+			h=(112*self.concat_index)
+			#print('{}{}'.format(roc_image.shape,self.recognition_faces.shape))
+			self.recognition_faces[h:h+112,:,:] = cv2.resize(roc_image[top:bottom,left:right], (112, 112))
 
-				#left right merge #horizonal
-				#bgr = np.concatenate((bgr,self.recognition_faces), axis=1)# np.hstack(bgr,self.recognition_faces)
-				#cv2.imshow('Face Detect11111',self.recognition_faces)
-				#cv2.waitKey(5)
-				#print('end q data')
+			cv2.rectangle(self.recognition_faces, (0, h+112-15), (112, h+112),(255,0,0), cv2.FILLED)
+			cv2.putText(self.recognition_faces, name, (0+3, h+112-3), cv2.FONT_HERSHEY_PLAIN, 1, (255,255,255))
+			self.concat_index=self.concat_index+1
+			#self.recognition_faces = np.vstack((self.recognition_faces,roc_image) )
+
+			#left right merge #horizonal
+			#bgr = np.concatenate((bgr,self.recognition_faces), axis=1)# np.hstack(bgr,self.recognition_faces)
+			#cv2.imshow('Face Detect11111',self.recognition_faces)
+			#cv2.waitKey(5)
+			#print('end q data')
 			
 		bgr = np.concatenate((bgr,self.recognition_faces), axis=1)
 		return bgr
@@ -116,7 +119,7 @@ def mp_recorgnition(inQ,outQ):
 		(startX, startY, endX, endY) = box
 		#cv2.imshow('Face Detect1',bgr[startY:endY,startX:endX])
 		#cv2.waitKey(5)
-		_align_img = _face_align.get_align_faces(bgr)
+		_align_img = _face_align.get_align_faces(bgr[startY:endY,startX:endX])
 		if(0<len(_align_img)):
 			_face_embedding = _recognition.get_face_feature(_align_img)
 
